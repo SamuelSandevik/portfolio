@@ -11,7 +11,7 @@ const Home = () => {
       id: 1,
       title: t("bookings_title"),
       description: t("bookings_description"),
-      image: "/src/assets/images/bookingsSignUp.png",
+      image: "/images/bookingsSignUp.png",
       url: "/",
       tech: ["React", "Rust", "Tailwind"],
     },
@@ -19,7 +19,7 @@ const Home = () => {
       id: 3,
       title: t("vinylVibes_title"),
       description: t("vinylVibes_description"),
-      image: "/src/assets/images/vinylvibesdesktop.png",
+      image: "/images/vinylvibesdesktop.png",
       url: "",
       tech: ["PHP", "MySQL", "tailwind"],
     },
@@ -34,7 +34,7 @@ const Home = () => {
 
     <div className="p-10 md:p-20 border-t-4 border-t-white dark:border-t-slate-800 dark:bg-slate-800 dark:text-white flex flex-col md:flex-row justify-center gap-8 items-center">
       <img
-        src="src/assets/images/jag.jpg"
+        src="/images/jag.jpg"
         alt="picture of me"
         className="w-[200px] object-contain rounded-md shadow-md"
       />
