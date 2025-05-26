@@ -8,17 +8,17 @@ const Projects = () => {
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="flex justify-center gap-6">
           <img
-            src="/public/images/image.png"
+            src="/images/image.png"
             alt="On boat"
             className="w-32 h-32 object-cover rounded-lg border border-slate-300 dark:border-slate-600"
           />
           <img
-            src="/public/images/image.jpg"
+            src="/images/image.jpg"
             alt="In Köln"
             className="w-32 h-32 object-cover rounded-lg border border-slate-300 dark:border-slate-600"
           />
           <img
-            src="/public/images/image(4).jpg"
+            src="/images/image(4).jpg"
             alt="In Greece"
             className="w-32 h-32 object-cover rounded-lg border border-slate-300 dark:border-slate-600"
           />
