@@ -5,36 +5,39 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-full h-auto p-3 shadow-md bg-gray-200 dark:bg-gray-900 transition-colors duration-300">
-      <div className="flex justify-between items-center">
-        <a href="/">
-        <div className="flex text-gray-800 dark:text-gray-200 items-baseline gap-2">
-          <p className="flex items-center text-xl first-letter:text-6xl font-bold ">
-           SAMUEL SANDEVIK
-          </p>
-          <div className="text-xs">FULLSTACK DEVELOPER</div>
-        </div>
+    <nav className="w-full bg-gray-200 dark:bg-gray-900 shadow-md transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="/" className="text-gray-800 dark:text-gray-200">
+          <div className="flex items-baseline gap-2">
+            <p className="text-xl font-bold leading-none">
+              SAMUEL SANDEVIK
+            </p>
+            <span className="text-xs hidden sm:inline">FULLSTACK DEVELOPER</span>
+          </div>
         </a>
 
         <button
-          className="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden focus:outline-none"
+          aria-label="Toggle menu"
         >
-          <div
-            className={`h-1 w-10 rounded-full bg-gray-800 dark:bg-gray-200 my-2 transform transition-all duration-300 ${
-              isMenuOpen ? "rotate-45 translate-y-3" : ""
-            }`}
-          ></div>
-          <div
-            className={`h-1 w-10 rounded-full bg-gray-800 dark:bg-gray-200 my-1 transition-opacity duration-300 ${
-              isMenuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></div>
-          <div
-            className={`h-1 w-10 rounded-full bg-gray-800 dark:bg-gray-200 my-2 transform transition-all duration-300 ${
-              isMenuOpen ? "-rotate-45 -translate-y-3" : ""
-            }`}
-          ></div>
+          <div className="space-y-1">
+            <span
+              className={`block h-1 w-6 rounded bg-gray-800 dark:bg-gray-200 transition-transform duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            />
+            <span
+              className={`block h-1 w-6 rounded bg-gray-800 dark:bg-gray-200 transition-opacity duration-300 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`block h-1 w-6 rounded bg-gray-800 dark:bg-gray-200 transition-transform duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            />
+          </div>
         </button>
 
         <div className="hidden md:flex">
@@ -43,11 +46,11 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden mt-4">
-          <NavBarMenu />
+        <div className="md:hidden px-4 pb-6 animate-fade-in-down">
+          <NavBarMenu isMobile />
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
