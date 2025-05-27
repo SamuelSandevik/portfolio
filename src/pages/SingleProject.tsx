@@ -95,20 +95,28 @@ const SingleProject = () => {
   return (
     <div className="bg-slate-100 dark:bg-slate-800 min-h-screen py-16 px-6 sm:px-12 lg:px-24 flex flex-col items-center">
       <div className="max-w-4xl w-full bg-slate-200 dark:bg-slate-700 rounded-lg shadow-lg overflow-hidden">
-        <div className="flex flex-col md:flex-row h-80 justify-center bg-white gap-6 p-6">
-          <img
-            src={project.phoneImage}
-            alt={`${project.title} phone`}
-            className="rounded-lg"
-            loading="lazy"
-          />
-          <img
-            src={project.computerImage}
-            alt={`${project.title} computer`}
-            className="rounded-lg"
-            loading="lazy"
-          />
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 bg-white p-6">
+          {project.phoneImage && (
+            <img
+              src={project.phoneImage}
+              alt={`${project.title} image 1`}
+              className="w-full md:w-auto max-w-xs md:max-w-sm object-contain rounded-lg max-h-[500px]"
+              loading="lazy"
+            />
+          )}
+        
+          {project.computerImage && (
+            <img
+              src={project.computerImage}
+              alt={`${project.title} image 2`}
+              className="w-full md:w-auto max-w-2xl object-contain rounded-lg max-h-[500px]"
+              loading="lazy"
+            />
+          )}
         </div>
+
+
+          
 
         <div className="p-8">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">
